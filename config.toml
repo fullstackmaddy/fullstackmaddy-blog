@@ -8,7 +8,7 @@ copyright = "Copyright © 2021, Full Stack Maddy by Mandar Dharmadhikari; all ri
 paginate = 10
 theme = "hugo-clarity"
 
-disqusShortname = "@disqus_6DnUckRNfa"
+disqusShortname = "fullstackmaddy"
 
 DefaultContentLanguage = "en"
 # [languages]
