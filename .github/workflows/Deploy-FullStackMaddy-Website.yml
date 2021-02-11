@@ -27,7 +27,9 @@ jobs:
     - name: Deploy Static Website
       uses: peaceiris/actions-gh-pages@v3
       with: 
-       deploy_key: ${{ secrets.PERSONAL_TOKEN }}
+       deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+       external_repository: fullstackmaddy/fullstackmaddy.github.io
+       publish_branch: main
        publish_dir: ./public
        user_name: 'github-actions[bot]'
        user_email: 'github-actions[bot]@users.noreply.github.com'
