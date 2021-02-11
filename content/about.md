@@ -6,5 +6,4 @@ aliases = ["about-us", "contact"]
 author = "Mandar Dharmadhikari"
 +++
 
-I am Mandar Dharmadhikari
  
