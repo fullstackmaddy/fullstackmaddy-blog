@@ -1,4 +1,4 @@
-name: Deploy-FullStackMaddy-Websiye
+name: Deploy-FullStackMaddy-Website
 
 on:
   push:
