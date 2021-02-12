@@ -4,14 +4,14 @@ baseurl = "fullstackmaddy.github.io"
 title = "Full Stack Maddy"
 author = "Mandar Dharmadhikari"
 copyright = "Copyright © 2021, Full Stack Maddy by Mandar Dharmadhikari; all rights reserved."
-canonifyurls = true
-relativeurls = true
+canonifyurls = false
+relativeurls = false
 
 paginate = 10
 theme = "hugo-clarity"
 
 disqusShortname = "fullstackmaddy"
-disqus_url = ""
+disqus_url = "https://fullstackmaddy.github.io"
 
 DefaultContentLanguage = "en"
 # [languages]
