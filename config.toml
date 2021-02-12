@@ -1,6 +1,6 @@
 # set `baseurl` to your root domain
 # if you set it to "/" share icons won't work properly on production
-baseurl = "https://fullstackmaddy.github.io/"  # Include trailing slash
+baseurl = "fullstackmaddy.github.io"  # Include trailing slash
 title = "Full Stack Maddy"
 author = "Mandar Dharmadhikari"
 copyright = "Copyright © 2021, Full Stack Maddy by Mandar Dharmadhikari; all rights reserved."
