@@ -209,7 +209,7 @@ I prefer writing my `yaml` file using `Visual Studio Code`. And I like the `GitH
 
 Now that we have the basic stuff in place, let us take a look at the flow of the workflow. The various steps that this flow will perfrom are shown below
 
-![Flow diagram](/images/deploy-logicapps-githubactions/flow.jpg)
+![Flow diagram](/images/deploy-logicapps-githubactions/flow1.jpg)
 
 
 ## The Workflow File
