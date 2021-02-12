@@ -33,10 +33,11 @@ I am an intergation developer and architect by profession. I have worked as an i
 
 #### In my Free time, I generally
 
-:loudspeaker: Publicly speak about azure
+{{< emoji ":speaker:" >}}Speak about azure
 
-:musical_keyboard: Play Piano
+{{< emoji ":musical_keyboard:" >}}Play Piano
 
-:pizza: Cook
+{{< emoji ":stew:" >}}Cook
 
-If you love my work, show some :heart: by sharing the blogs and the repositoires. Consider providing a star
+If you love my work, show some {{< emoji ":heart:" >}} by sharing the blogs and the repositoires. Consider providing a star
+

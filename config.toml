@@ -45,6 +45,9 @@ series = "series"
     # style = "monokai"
     tabWidth = 2
 
+#Setup Emoji Suppport
+enableEmoji = true
+
 [params]
 author = "Mandar Dharmadhikari"
 twitter = "@janedoe"
@@ -127,5 +130,3 @@ languageMenuName = "🌐"
 # notice of the footer.
 # since = 2021
 
-#Setup Emoji Suppport
-enableEmoji = true
