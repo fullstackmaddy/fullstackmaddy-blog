@@ -1,6 +1,8 @@
 ---
 title: "{{ replace .Name "-" " " | title }}" # Title of the blog post.
-date: {{ .lastmod  }} # Date of post creation.
+date: {{ .Date.Format "2006-01-02" }}
+publishdate: {{ now.Format "2006-01-02" }}
+lastmod: {{ now.Format "2006-01-02" }}
 description: "Article description." # Description used for search engine.
 featured: true # Sets if post is a featured post, making appear on the home page side bar.
 draft: true # Sets whether to render this page. Draft of true will not be rendered.
