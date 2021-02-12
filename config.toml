@@ -1,6 +1,6 @@
 
 
-baseurl = "https://fullstackmaddy.github.io/"
+baseurl = "fullstackmaddy.github.io"
 title = "Full Stack Maddy"
 author = "Mandar Dharmadhikari"
 copyright = "Copyright © 2021, Full Stack Maddy by Mandar Dharmadhikari; all rights reserved."
