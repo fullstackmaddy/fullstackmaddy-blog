@@ -11,6 +11,7 @@ paginate = 10
 theme = "hugo-clarity"
 
 disqusShortname = "fullstackmaddy"
+disqus_url = ""
 
 DefaultContentLanguage = "en"
 # [languages]
