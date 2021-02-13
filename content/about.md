@@ -15,11 +15,11 @@ comment = false
      />
 </p>
 
-Dear reader <img src='/images/about/generalimages/wave.gif' width="50" height="50">
+Dear reader, <img src='/images/about/generalimages/wave.gif' width="50" height="50">
 
 I am Mandar Dharmadhikari
 
-I am an intergation developer and architect by profession. I have worked as an integration developer, designer architect for better part of 9 years. A recent dash with blazor framework sparked my interest in full stack development.  Over the years I have written many articles on Mircrosoft's technet wiki and have done public presentations aroun Microsoft Integration tech stack. You can find my presentation slides at [My Presentation Slides](https://github.com/fullstackmaddy/Presentations). I have recently started a static blog site using Hugo and GitHub pages. You can read more about it at [FullStackMaddy](https://fullstackmaddy.github.io/)
+I am an integration developer and architect by profession. I have worked as an integration developer, designer architect for better part of 9 years. A recent dash with blazor framework sparked my interest in full stack development.  Over the years I have written many articles on Mircrosoft's technet wiki and have done public presentations around Microsoft Integration tech stack. You can find my presentation slides at [My Presentation Slides](https://github.com/fullstackmaddy/Presentations). I have recently started a static blog site using Hugo and GitHub pages. You can read more about it at [FullStackMaddy](https://fullstackmaddy.github.io/)
 
 #### Tech Stack I work with
 
@@ -39,5 +39,5 @@ I am an intergation developer and architect by profession. I have worked as an i
 
 {{< emoji ":stew:" >}}Cook
 
-If you love my work, show some {{< emoji ":heart:" >}} by sharing the blogs and the repositoires. Consider providing a star
+If you love my work, show some {{< emoji ":heart:" >}} by sharing the blogs and the repositories. Consider providing a star
 
