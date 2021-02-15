@@ -4,8 +4,8 @@ title: "How I deploy my Hugo static website automatically with GITHUB Actions"
 description : "Primer on deploying static website with GitHub Action"
 date: "2021-02-15"
 tags : [
-    "Blazor",
-    "Open API"
+    "GITHUB Actions",
+    "HUGO"
 ]
 draft : "true"
 featured : true
@@ -50,7 +50,7 @@ This instantly makes sense from the good old `Separation of Concerns` principle 
 I created two public repositories 
 
 
-1. [fullstackmaddy/fullstackmaddy.github.io](https://github.com/fullstackmaddy/fullstackmaddy.github.io)To host the assets of the website.
+1. [fullstackmaddy/fullstackmaddy.github.io](https://github.com/fullstackmaddy/fullstackmaddy.github.io) : To host the assets of the website.
 2. [fullstackmaddy/fullstackmaddy-blog](https://github.com/fullstackmaddy/fullstackmaddy-blog) : To contain the code.
 
 Once we go to the settings, we can see that Github recognizes the `username.github.io` and gives the locations from which the assets will be served when some visits `https://<username>.github.io`
@@ -88,6 +88,126 @@ This completed the basic setup and I created the GITHUB action which is discusse
 ## GITHUB Action
 
 
+I will now break down each component of the flow. 
 
+### Trigger
 
+The workflow is triggered when there is a push to the master branch of the source repository. The snippet looks like
 
+```yaml
+on:
+  push:
+    branches:
+      - "main"
+
+```
+So whenever a push is made on the `main` branch, the workflow runs subsequent steps.
+
+Next step is to specify where the jobs will be run, I have chosen ubuntu-latest as the platform where the tasks will be run. The first task is to check out the main branch of the repository it is dune using the `actions/checkout@v2` . It is done as 
+
+```yaml
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+
+    # Checkout the code
+    - name: Checkout the code
+      uses: actions/checkout@v2
+
+```
+
+Once this is done,  hugo is setup and the hugo build action is run so that the assets for the static website are created. It is done as following
+
+```yaml
+
+    # Setup Hugo
+    - name: Set up Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: 'latest'
+        extended: true
+    
+    #Build
+    - name: Build Static Website
+      run: hugo
+
+```
+
+And as the final step, the created assets are pushed to the destination repository. It is configured as below.
+
+```yaml
+
+# Deploy the website
+
+- name: Deploy Static Website
+      uses: peaceiris/actions-gh-pages@v3
+      with: 
+       deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+       external_repository: fullstackmaddy/fullstackmaddy.github.io
+       publish_branch: main
+       publish_dir: ./public
+       user_name: 'github-actions[bot]'
+       user_email: 'github-actions[bot]@users.noreply.github.com'
+       full_commit_message: ${{ github.event.head_commit.message }}
+
+```
+
+The final workflow looks like following
+
+```yaml
+
+name: Deploy-FullStackMaddy-Website
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+
+    # Checkout the code
+    - name: Checkout the code
+      uses: actions/checkout@v2
+    
+    # Setup Hugo
+    - name: Set up Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: 'latest'
+        extended: true
+    
+    #Build
+    - name: Build Static Website
+      run: hugo
+
+    - name: Deploy Static Website
+      uses: peaceiris/actions-gh-pages@v3
+      with: 
+       deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+       external_repository: fullstackmaddy/fullstackmaddy.github.io
+       publish_branch: main
+       publish_dir: ./public
+       user_name: 'github-actions[bot]'
+       user_email: 'github-actions[bot]@users.noreply.github.com'
+       full_commit_message: ${{ github.event.head_commit.message }}
+
+```
+I have also added a badge on the README.md file of the source repository so that any point I know that my workflow is working properly or not. The typical badge looks like following.
+
+![Deployment badge](/images/deploy-posts-with-github-actions/deploymentbadge.PNG)
+
+The messages and the commits made by the bot are available for inspection
+
+![Action Bot records comments](/images/deploy-posts-with-github-actions/githubactionsbot.PNG)
+
+And that is it, this takes care of the deployment of the new blog posts to my website.
+
+## Possible Improvement
+
+I am thinking of adding tags to my commits and change my workflow to trigger on only specific tags.
+
+PS: This post is also automatically deployed.

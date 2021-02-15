@@ -41,7 +41,7 @@ Once done the project structure looks like following
 
 Now we need the javascripts to render the `OpenAPI` / `Swagger` documentation. Fortunately we do not need to write these scripts ourselves, these scripts are released on GITHUB for us to use. We can get them from  [swagger-api
 /
-swagger-ui]("https://github.com/swagger-api/swagger-ui") repository. All we need to do is download the latest release from [Swagger UI Latest release]("https://github.com/swagger-api/swagger-ui/releases/tag/v3.43.0")
+swagger-ui](https://github.com/swagger-api/swagger-ui) repository. All we need to do is download the latest release from [Swagger UI Latest release](https://github.com/swagger-api/swagger-ui/releases/tag/v3.43.0)
 
 Once this is done, we need to extract out the release and we need to get following three things from the `dist` folder
 1. swagger-ui-bundle.js
@@ -147,6 +147,6 @@ We will now apply the css that we retrieved from the release. All we need to do 
 ## Wrapup
 We saw how easy it is to integrate the SwaggerUI in a blazor application. The only problem I see in this approach is that we have to manually copy the javascripts from the `SwaggerUI` repository to make them work for us. There are other configurations like setting up CORS etc that I have not touched upon but you are free to explore them. The documentation if available on the repository that I pointed to earlier on.
 
-The code for this demo can be found on my repository at [`fullstackmaddy
+The code for this demo can be found on my repository at [fullstackmaddy
 /
-blazor-wasm-as-open-api-hub`]("https://github.com/fullstackmaddy/blazor-wasm-as-open-api-hub")
+blazor-wasm-as-open-api-hub](https://github.com/fullstackmaddy/blazor-wasm-as-open-api-hub)
