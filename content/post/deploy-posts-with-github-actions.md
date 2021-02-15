@@ -7,7 +7,7 @@ tags : [
     "GITHUB Actions",
     "HUGO"
 ]
-draft : "true"
+draft : "false"
 featured : true
 thumbnail : "images/deploy-posts-with-github-actions/feature.PNG"
 ---
